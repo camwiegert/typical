@@ -6,7 +6,7 @@ export async function type(node, text) {
 async function edit(node, edits, speed = 100) {
     for (const op of operator(edits)) {
         op(node);
-        await wait(speed + speed * (Math.random() - 0.5));
+        await wait(speed + (speed / 2) * (Math.random() - 0.5));
     }
 }
 
