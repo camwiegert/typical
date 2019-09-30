@@ -10,19 +10,19 @@ async function edit(node, edits, speed = 100) {
     }
 }
 
-function* operator(edits) {
+export function* operator(edits) {
     for (const edit of edits) {
         yield (node) => requestAnimationFrame(() => node.textContent = edit);
     }
 }
 
-function* writer(text, startIndex = 0, endIndex = text.length) {
+export function* writer(text, startIndex = 0, endIndex = text.length) {
     while (startIndex < endIndex) {
         yield text.slice(0, ++startIndex);
     }
 }
 
-function* deleter(text, startIndex = 0, endIndex = text.length) {
+export function* deleter(text, startIndex = 0, endIndex = text.length) {
     while (endIndex > startIndex) {
         yield text.slice(0, --endIndex);
     }
@@ -32,6 +32,6 @@ function wait(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-function getOverlap(start, end) {
+export function getOverlap(start, end) {
     return start.startsWith(end) ? end.length : [...end].findIndex((char, i) => start[i] !== char);
 }

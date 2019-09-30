@@ -1,0 +1,12 @@
+{
+  "name": "@camwiegert/typical",
+  "version": "0.1.0",
+  "description": "Animated typing in ~350 bytes",
+  "scripts": {
+      "test": "node -r esm test"
+  },
+  "devDependencies": {
+    "esm": "^3.2.25",
+    "tape": "^4.11.0"
+  }
+}
