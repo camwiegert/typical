@@ -4,7 +4,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Install and test
-      run: |
-        npm install
-        npm test
+    - uses: actions/checkout@master
+    - uses: actions/setup-node@master
+      with:
+        node-version: 10.x
+    - run: npm install
+    - run: npm test
