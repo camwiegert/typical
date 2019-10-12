@@ -2,8 +2,8 @@ import test from 'tape';
 
 import {
     deleter,
+    editor,
     getOverlap,
-    operator,
     writer
 } from '../typical.js';
 
@@ -28,6 +28,26 @@ test('deleter', t => {
     t.end();
 });
 
+test('editor', t => {
+    t.ok(
+        editor(deleter('text'))[Symbol.iterator],
+        'Should create an iterable'
+    );
+
+    t.ok(
+        [...editor(writer('text'))].length === 4,
+        'Should have correct length'
+    );
+
+    t.equal(
+        typeof editor(deleter('text')).next().value,
+        'function',
+        'Should yield functions'
+    );
+
+    t.end();
+});
+
 test('getOverlap', t => {
     t.ok(
         getOverlap('some text', 'some') === 4,
@@ -42,26 +62,6 @@ test('getOverlap', t => {
     t.ok(
         getOverlap('some text', 'other text') === 0,
         'Should handle no overlap'
-    );
-
-    t.end();
-});
-
-test('operator', t => {
-    t.ok(
-        operator(deleter('text'))[Symbol.iterator],
-        'Should create an iterable'
-    );
-
-    t.ok(
-        [...operator(writer('text'))].length === 4,
-        'Should have correct length'
-    );
-
-    t.equal(
-        typeof operator(deleter('text')).next().value,
-        'function',
-        'Should yield functions'
     );
 
     t.end();

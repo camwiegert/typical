@@ -1,6 +1,6 @@
 # typical
 
-> Animated typing in ~350 bytes of JavaScript.
+> Animated typing in ~400 bytes of JavaScript.
 
 ## Install
 

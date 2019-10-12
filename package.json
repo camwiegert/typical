@@ -1,7 +1,7 @@
 {
   "name": "@camwiegert/typical",
   "version": "0.1.0",
-  "description": "Animated typing in ~350 bytes",
+  "description": "Animated typing in ~400 bytes",
   "scripts": {
       "test": "node -r esm test"
   },
