@@ -1,8 +1,14 @@
 export async function type(node, ...args) {
     for (const arg of args) {
         switch (typeof arg) {
-            case 'string': await edit(node, arg);
-            case 'number': await wait(arg);
+            case 'string':
+                await edit(node, arg);
+                break;
+            case 'number':
+                await wait(arg);
+                break;
+            default:
+                await arg;
         }
     }
 }
