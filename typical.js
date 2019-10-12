@@ -25,10 +25,10 @@ async function wait(ms) {
     await new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function perform(node, edits, speed = 80) {
+async function perform(node, edits, speed = 60) {
     for (const op of editor(edits)) {
         op(node);
-        await wait(speed + (speed / 2) * (Math.random() - 0.5));
+        await wait(speed + speed * (Math.random() - 0.5));
     }
 }
 
