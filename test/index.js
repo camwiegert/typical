@@ -34,8 +34,8 @@ test('editor', t => {
         'Should create an iterable'
     );
 
-    t.ok(
-        [...editor(writer('text'))].length === 4,
+    t.equal(
+        [...editor(writer('text'))].length, 4,
         'Should have correct length'
     );
 
@@ -49,28 +49,28 @@ test('editor', t => {
 });
 
 test('getOverlap', t => {
-    t.ok(
-        getOverlap('some text', 'some other text') === 5,
+    t.equal(
+        getOverlap('some text', 'some other text'), 5,
         'Should handle partial overlap'
     );
 
-    t.ok(
-        getOverlap('some text', 'other text') === 0,
+    t.equal(
+        getOverlap('some text', 'other text'), 0,
         'Should handle no overlap'
     );
 
-    t.ok(
-        getOverlap('some text', 'some text') === 9,
+    t.equal(
+        getOverlap('some text', 'some text'), 9,
         'Should handle complete overlap'
     );
 
-    t.ok(
-        getOverlap('some text', 'some text and') === 9,
+    t.equal(
+        getOverlap('some text', 'some text and'), 9,
         'Should handle write only'
     );
 
-    t.ok(
-        getOverlap('some text', 'some') === 4,
+    t.equal(
+        getOverlap('some text', 'some'), 4,
         'Should handle delete only'
     );
 
