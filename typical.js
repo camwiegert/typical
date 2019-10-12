@@ -51,5 +51,5 @@ export function* deleter(text, startIndex = 0, endIndex = text.length) {
 }
 
 export function getOverlap(start, end) {
-    return start.startsWith(end) ? end.length : [...end].findIndex((char, i) => start[i] !== char);
+    return [...start].findIndex((char, i) => end[i] !== char);
 }
