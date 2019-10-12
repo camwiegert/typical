@@ -8,7 +8,7 @@ export async function type(node, ...args) {
                 await wait(arg);
                 break;
             case 'function':
-                await arg(node);
+                await arg(node, ...args);
                 break;
             default:
                 await arg;
