@@ -5,6 +5,10 @@
   "scripts": {
       "test": "node -r esm test"
   },
+  "author": "Cam Wiegert <cam@camwiegert.com>",
+  "homepage": "https://github.com/camwiegert/typical",
+  "repository": "https://github.com/camwiegert/typical",
+  "license": "MIT",
   "devDependencies": {
     "esm": "^3.2.25",
     "tape": "^4.11.0"
