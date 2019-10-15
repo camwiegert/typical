@@ -10,6 +10,8 @@
 - **Waiting:** wait on arbitrary Promises
 - **Humanity:** slightly varied typing speed
 
+[**Demo →**](https://codepen.io/camwiegert/pen/rNNepYo)
+
 ---
 
 ## Install
