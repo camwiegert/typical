@@ -20,7 +20,7 @@ npm install @camwiegert/typical
 
 <details>
   <summary><strong>More install options</strong></summary>
-  <div>To-do</div>
+  <p>Instead of using a package manager, you can download <code>typical.js</code> from <a href="https://raw.githubusercontent.com/camwiegert/typical/master/typical.js">GitHub</a> and import it locally or import it directly from a CDN like <a href="https://unpkg.com/@camwiegert/typical">unpkg</a>.</p>
 </details>
 
 ## API
