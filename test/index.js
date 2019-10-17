@@ -23,7 +23,19 @@ test('deleter', t => {
         [...deleter('')],
         [],
         'Should handle empty string'
-    )
+    );
+
+    t.deepEqual(
+        [...deleter('text', 2)],
+        ['tex', 'te'],
+        'Should handle startIndex'
+    );
+
+    t.deepEqual(
+        [...deleter('text', 0, 2)],
+        ['t', ''],
+        'Should handle endIndex'
+    );
 
     t.end();
 });
@@ -93,6 +105,18 @@ test('writer', t => {
         [...writer('')],
         [],
         'Should handle empty string'
+    );
+
+    t.deepEqual(
+        [...writer('text', 2)],
+        ['tex', 'text'],
+        'Should handle startIndex'
+    );
+
+    t.deepEqual(
+        [...writer('text', 0, 2)],
+        ['t', 'te'],
+        'Should handle endIndex'
     );
 
     t.end();
