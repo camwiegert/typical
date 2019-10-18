@@ -37,6 +37,12 @@ test('deleter', t => {
         'Should handle endIndex'
     );
 
+    t.deepEqual(
+        [...deleter('🍕')],
+        [''],
+        'Should handle emoji'
+    );
+
     t.end();
 });
 
@@ -86,6 +92,11 @@ test('getOverlap', t => {
         'Should handle delete only'
     );
 
+    t.equal(
+        getOverlap('emoji 🐡', 'emoji 🐡 blowfish'), 7,
+        'Should handle emoji'
+    );
+
     t.end();
 });
 
@@ -117,6 +128,12 @@ test('writer', t => {
         [...writer('text', 0, 2)],
         ['t', 'te'],
         'Should handle endIndex'
+    );
+
+    t.deepEqual(
+        [...writer('📚')],
+        ['📚'],
+        'Should handle emoji'
     );
 
     t.end();
