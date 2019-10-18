@@ -50,6 +50,6 @@ export function* deleter(text, startIndex = 0, endIndex = text.length) {
     }
 }
 
-export function getOverlap(start, end) {
+export function getOverlap(start, [...end]) {
     return [...start, NaN].findIndex((char, i) => end[i] !== char);
 }
