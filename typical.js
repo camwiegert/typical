@@ -38,18 +38,18 @@ export function* editor(edits) {
     }
 }
 
-export function* writer(text, startIndex = 0, endIndex = text.length) {
+export function* writer([...text], startIndex = 0, endIndex = text.length) {
     while (startIndex < endIndex) {
-        yield text.slice(0, ++startIndex);
+        yield text.slice(0, ++startIndex).join('');
     }
 }
 
-export function* deleter(text, startIndex = 0, endIndex = text.length) {
+export function* deleter([...text], startIndex = 0, endIndex = text.length) {
     while (endIndex > startIndex) {
-        yield text.slice(0, --endIndex);
+        yield text.slice(0, --endIndex).join('');
     }
 }
 
-export function getOverlap(start, end) {
+export function getOverlap(start, [...end]) {
     return [...start, NaN].findIndex((char, i) => end[i] !== char);
 }
