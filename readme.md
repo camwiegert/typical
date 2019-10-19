@@ -4,6 +4,7 @@
 
 - **Zero dependencies**
 - **MIT licensed** [→](https://github.com/camwiegert/typical/tree/master/LICENSE)
+- **Emoji support**
 - **Smart delete:** only delete what needs deleting
 - **Pausing:** pause between steps
 - **Looping:** easily loop from any point
