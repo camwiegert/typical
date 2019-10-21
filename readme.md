@@ -106,3 +106,7 @@ type(target, toggle, 'Type me', toggle);
 - [x] Firefox
 - [x] Safari
 - [ ] Internet Explorer
+
+## Related
+
+- [react-typical](https://github.com/catalinmiron/react-typical) - React component
