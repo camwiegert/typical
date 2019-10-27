@@ -114,3 +114,4 @@ type(target, toggle, 'Type me', toggle);
 ## Related
 
 - [react-typical](https://github.com/catalinmiron/react-typical) - React component
+- [vue-typical](https://github.com/Turkyden/vue-typical) - Vue component
