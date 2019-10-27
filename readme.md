@@ -36,10 +36,12 @@ type(target: HTMLElement, ...steps: any[]) => Promise<void>;
 
 The module exports a single function, `type`, which takes a target element as its first argument, and any number of additional arguments as the steps to perform. Additional arguments perform actions based on their type:
 
-- `string` arguments will be typed
-- `number` arguments will pause, in milliseconds
-- `function` arguments will be called with the target element as an argument
-- `Promise` arguments will wait for resolution
+| Type       | Action                   |
+|:-----------|:-------------------------|
+| `string`   | Type text                |
+| `number`   | Pause (milliseconds)     |
+| `function` | Call with target element |
+| `Promise`  | Wait for resolution      |
 
 ## Usage
 
