@@ -13,7 +13,7 @@
 
 [**Demo →**](https://codepen.io/camwiegert/pen/rNNepYo)
 
-![typical](https://repository-images.githubusercontent.com/211405607/1dd6e300-f8b2-11e9-8260-26ad1d49db17)
+[![](https://repository-images.githubusercontent.com/211405607/1dd6e300-f8b2-11e9-8260-26ad1d49db17)](https://codepen.io/camwiegert/pen/rNNepYo "Demo on CodePen")
 
 ---
 
