@@ -1,8 +1,10 @@
-export async function type(node, ...args) {
+export async function type(node, helper, ...args) {
     for (const arg of args) {
         switch (typeof arg) {
             case 'string':
                 await edit(node, arg);
+                if(typeof helper == 'function')
+                    helper(arg);
                 break;
             case 'number':
                 await wait(arg);
